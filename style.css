@@ -420,9 +420,9 @@ footer {
 
 /* Hide overview on very small screens to save space */
 @media (max-width: 360px) {
-    #movieOverview {
+   /* #movieOverview {
         display: none;
-    }
+    }*/
 }
 
 .video-container iframe {
@@ -446,11 +446,11 @@ p {
 }
 
 @media (max-width: 768px) {
-    #movieOverview {
+   /* #movieOverview {
         visibility: hidden;
         height: 0;
         overflow: hidden;
-    }
+    }*/
 
     .video-container {
         margin-bottom: 1rem;
