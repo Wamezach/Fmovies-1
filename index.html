@@ -38,17 +38,18 @@
 <div id="movieModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="movieTitle" aria-describedby="movieOverview">
   <div class="modal-content">
     <button class="close-button" aria-label="Close modal">&times;</button>
-    <h2 id="movieTitle"></h2>
-    <p id="movieOverview"></p>
+<div class="video-container">
+      <iframe id="movieIframe" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+    </div>
 
     <div id="serverDropdown" class="server-dropdown">
       <label for="server">Select Server:</label>
       <select id="server"></select>
     </div>
 
-    <div class="video-container">
-      <iframe id="movieIframe" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
-    </div>
+    
+        <h2 id="movieTitle"></h2>
+    <p id="movieOverview"></p>
   </div>
 </div>
 
