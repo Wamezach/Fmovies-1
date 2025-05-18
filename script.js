@@ -186,7 +186,7 @@ function openModal(movie) {
         .then(data => {
             if (data.results.length > 0) {
                 const videoKey = data.results[0].key;
-                movieIframe.src = `https://vidsrc.to/embed/movie/${movie.id}`;
+                movieIframe.src = `https://vidsrc.cc/v2/embed/movie/${movie.id}`;
             } else {
                 movieIframe.src = '';
             }
@@ -198,7 +198,7 @@ function openModal(movie) {
             serverSelect.innerHTML = '';
 
             const serverOptions = [
-                { name: 'Server 1', url: `https://vidsrc.to/embed/movie/${movie.id}` },
+                { name: 'Server 1', url: `https://vidsrc.cc/v2/embed/movie/${movie.id}` },
                 { name: 'Server 2', url: `https://another-server.com/embed/${movie.id}` },
                 { name: 'Server 3', url: `https://yetanother-server.com/embed/${movie.id}` },
             ];
