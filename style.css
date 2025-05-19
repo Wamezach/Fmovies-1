@@ -31,9 +31,9 @@ body {
   border: none;
   height: 0.1em; /* reduced from 0.2em */
   background-color: var(--highlight-color);
-  width: 100%;
-  max-width: 100%;
-  margin: 0.8em 0;
+  width: 80%;
+ 
+
   border-radius: 1em;
 }
 
