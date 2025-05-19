@@ -27,7 +27,15 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
 }
-
+.divider {
+  border: none;
+  height: 0.2em; /* Responsive height */
+  background-color: #f39c12; /* Replace with your primary color */
+  width: 100%; /* Full width of parent */
+  max-width: 100%;
+  margin: 1em 0; /* Vertical spacing, responsive */
+  border-radius: 1em; /* Soft rounded edge */
+}
 header {
     padding: 1rem;
     display: flex;
