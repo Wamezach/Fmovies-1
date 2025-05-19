@@ -301,6 +301,7 @@ footer {
 }
 
 /* Modal Styling */
+/* Modal Styling */
 .modal {
   display: none;
   position: fixed;
@@ -310,26 +311,23 @@ footer {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.85);
- 
+  overflow: hidden;
   padding: 0;
-     overflow-y: auto; /* allow modal scroll */
 }
 
-/* Modal Content fills full screen with flex column */
+/* Modal Content */
 .modal-content {
   background-color: var(--secondary-color);
   color: var(--text-light);
-  width: 100vw;
-  height: 100vh;
-  padding: 1rem 1.5rem;
-  border-radius: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   position: relative;
   box-shadow: none;
-
-     height: auto; /* allow content to grow */
-  max-height: 90vh; /* prevent too tall modal */
+  overflow: hidden;
+  border-radius: 0;
 }
 
 /* Close Button */
@@ -337,7 +335,7 @@ footer {
   position: absolute;
   top: 12px;
   right: 12px;
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 700;
   color: var(--highlight-color);
   background: rgba(255, 255, 255, 0.1);
@@ -355,7 +353,7 @@ footer {
 
 /* Movie Title */
 #movieTitle {
-  font-size: clamp(18px, 2vw, 24px);
+  font-size: clamp(24px, 5vw, 32px);
   font-weight: 700;
   margin-bottom: 0.5rem;
   user-select: text;
@@ -398,18 +396,7 @@ footer {
   outline: none;
 }
 
-/* Movie Overview */
-#movieOverview {
-  font-size: clamp(12px, 1.5vw, 16px);
-  color: var(--text-muted);
-  line-height: 1.5;
-  margin-bottom: 1rem;
-  max-height: 4.5em;
-  overflow: hidden;
-  user-select: text;
-}
-
-/* Video Container with 65% height on desktop */
+/* Video Container */
 .video-container {
   position: relative;
   width: 100%;
@@ -430,7 +417,18 @@ footer {
   border-radius: 6px;
 }
 
-/* Responsive for tablets */
+/* Movie Overview */
+#movieOverview {
+  font-size: clamp(12px, 1.5vw, 16px);
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-top: 1rem;
+  overflow-y: auto;
+  max-height: 20vh; /* Limit height to 20% of viewport */
+  user-select: text;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 1024px) {
   .video-container {
     height: 55vh;
@@ -444,17 +442,16 @@ footer {
   }
   #movieOverview {
     font-size: 0.95rem;
-    max-height: 5em;
+    max-height: 25vh;
   }
 }
 
-/* Responsive for phones */
 @media (max-width: 768px) {
   .modal-content {
-    padding: 0.8rem 1rem;
+    padding: 0.8rem;
   }
   .video-container {
-    height: 40vh; /* smaller video on mobile */
+    height: 40vh;
   }
   #movieTitle {
     font-size: 1.3rem;
@@ -466,11 +463,10 @@ footer {
   }
   #movieOverview {
     font-size: 0.9rem;
-    max-height: 4em;
+    max-height: 30vh;
   }
 }
 
-/* Smaller phones */
 @media (max-width: 480px) {
   .close-button {
     top: 8px;
@@ -483,12 +479,13 @@ footer {
   }
   #movieOverview {
     font-size: 0.85rem;
-    max-height: 3.5em;
+    max-height: 35vh;
   }
   .video-container {
     height: 35vh;
   }
 }
+
 
 
 
