@@ -314,13 +314,11 @@ footer {
   padding: 0; /* Remove unwanted spacing */
 }
 
-/* Modal Content */
 .modal-content {
   background-color: var(--secondary-color);
   color: var(--text-light);
-  margin: 0 auto;
-  margin-top: 2rem;
-  max-width: 1000px;
+  margin: 2rem auto;
+  max-width: 1200px;
   width: 95%;
   padding: 0;
   border-radius: 12px;
@@ -330,23 +328,24 @@ footer {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  position: relative;
 }
 
-/* Close Button */
+/* Close Button inside modal */
 .close-button {
   position: absolute;
   top: 10px;
-  right: 15px;
-  font-size: 28px;
+  right: 10px;
+  font-size: 26px;
   font-weight: 700;
   color: var(--highlight-color);
-  background: transparent;
+  background: rgba(255, 255, 255, 0.05);
   border: none;
   cursor: pointer;
-  padding: 8px 12px;
-  border-radius: 4px;
+  padding: 6px 10px;
+  border-radius: 6px;
   transition: background-color 0.2s ease;
-  z-index: 1;
+  z-index: 10;
 }
 
 .close-button:hover,
