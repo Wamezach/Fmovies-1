@@ -34,15 +34,29 @@
   <div class="page" id="next" tabindex="0" role="button" aria-label="Next page">Next Page</div>
 </div>
 
-<!-- Movie Detail Modal -->
 <div id="movieModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="movieTitle" aria-describedby="movieOverview">
   <div class="modal-content">
     <button class="close-button" aria-label="Close modal">&times;</button>
-    <h2 id="movieTitle"></h2>
-     <div id="serverDropdown" class="server-dropdown">
+    
+    <h2 id="movieTitle">Movie Title</h2>
+    
+    <!-- Server Selection -->
+    <div id="serverDropdown" class="server-dropdown">
       <label for="server">Select Server:</label>
-      <select id="server"></select>
+      <select id="server">
+        <!-- Dynamically filled -->
+      </select>
     </div>
+    
+    <!-- Movie Overview -->
+    <p id="movieOverview">Movie description goes here...</p>
+
+    <!-- Video Embed -->
+    <div class="video-container">
+      <iframe src="" id="movieIframe" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
 
     <div class="video-container">
       <iframe id="movieIframe" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
