@@ -30,10 +30,10 @@ body {
 .divider {
   border: none;
   height: 0.2em;
-  background-color: var(--primary-color); /* Use the root variable */
+  background-color: var(--highlight-color);
   width: 100%;
   max-width: 100%;
-  margin: 1em 0;
+  margin: 0.8em 0;
   border-radius: 1em;
 }
 header {
@@ -299,30 +299,21 @@ footer {
     cursor: pointer;
 }
 
+/* Modal background */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
-    left: 0;
+    z-index: 10000;
     top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 10000; /* Higher than other elements */
     left: 0;
-    top: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7); /* Darker backdrop for better focus */
-    overflow-y: auto; /* Allow scrolling if content overflows viewport */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
+/* Modal content box */
 .modal-content {
     background-color: var(--secondary-color);
     color: var(--text-light);
@@ -330,66 +321,87 @@ footer {
     border-radius: 12px;
     max-width: 800px;
     width: 90%;
-    padding: 20px 30px;
+    padding: 1rem 1.5rem;
     box-shadow:
-        0 8px 16px rgba(0,0,0,0.25),
-        0 12px 48px rgba(0,0,0,0.2);
-    position: relative;
-
-    /* Flex layout for content and video, vertical stacking */
+        0 8px 16px rgba(0, 0, 0, 0.25),
+        0 12px 48px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 0.8rem;
 }
 
-/* Close button: larger tap area for mobiles */
+/* Close button */
 .close-button {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 12px;
+    right: 12px;
     font-size: 28px;
     font-weight: 700;
     color: var(--highlight-color);
     cursor: pointer;
-    user-select: none;
-    padding: 8px 12px;      /* Adjust padding for rectangular box */
-    border-radius: 4px;     /* Small rounded corners, optional */
+    padding: 8px 12px;
+    border-radius: 4px;
+    background: transparent;
     transition: background-color 0.2s ease;
 }
-
 .close-button:hover,
 .close-button:focus {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-
-.close-button:hover,
-.close-button:focus {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Title */
+/* Movie title */
 #movieTitle {
-    font-size: clamp(24px, 6vw, 32px);
-    margin-bottom: 0.5rem;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin: 0;
     font-weight: 700;
 }
 
-/* Overview text */
-#movieOverview {
-    font-size: clamp(14px, 3vw, 18px);
-    line-height: 1.5;
-    color: var(--text-muted);
+/* Server dropdown container */
+#serverDropdown {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+  flex-wrap: wrap;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Video container with responsive aspect ratio */
+#serverDropdown label {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+#serverDropdown select {
+  padding: 8px 12px;
+  font-size: 1rem;
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23E50914' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 10px 6px;
+  min-width: 180px;
+}
+#serverDropdown select:hover,
+#serverDropdown select:focus {
+  border-color: var(--highlight-color);
+  background-color: var(--primary-color);
+}
+
+/* Video container */
 .video-container {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%; /* 16:9 */
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin: 0;
 }
 
 .video-container iframe {
@@ -399,23 +411,26 @@ footer {
     width: 100%;
     height: 100%;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
-/* Scrollable content on smaller devices */
-@media (max-width: 480px) {
+/* Overview text */
+#movieOverview {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
     .modal-content {
-        padding: 15px 20px;
+        padding: 1rem;
         width: 95%;
-        margin: 1.5rem auto;
     }
 
     #movieTitle {
         font-size: 1.5rem;
-    }
-
-    #movieOverview {
-        font-size: 1rem;
     }
 
     .close-button {
@@ -426,18 +441,20 @@ footer {
     }
 }
 
-/* Hide overview on very small screens to save space */
-@media (max-width: 360px) {
- 
-    
-}
+@media (max-width: 480px) {
+    #serverDropdown {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
 
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    #movieOverview {
+        font-size: 0.95rem;
+    }
+
+    .divider {
+        height: 0.15em;
+    }
 }
 
 h1 {
