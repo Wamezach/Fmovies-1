@@ -37,9 +37,12 @@
 <div id="movieModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="movieTitle" aria-describedby="movieOverview">
   <div class="modal-content">
     <button class="close-button" aria-label="Close modal">&times;</button>
-    
+
     <h2 id="movieTitle">Movie Title</h2>
-    
+
+    <!-- Divider below title -->
+    <hr class="divider" />
+
     <!-- Server Selection -->
     <div id="serverDropdown" class="server-dropdown">
       <label for="server">Select Server:</label>
@@ -47,14 +50,16 @@
         <!-- Dynamically filled -->
       </select>
     </div>
+
     <div class="video-container">
       <iframe src="" id="movieIframe" allowfullscreen></iframe>
     </div>
+
+    <!-- Divider below video -->
+    <hr class="divider" />
+
     <!-- Movie Overview -->
     <p id="movieOverview">Movie description goes here...</p>
-
-    <!-- Video Embed -->
-    
   </div>
 </div>
 
