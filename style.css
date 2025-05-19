@@ -567,16 +567,4 @@ p {
   background-color: var(--highlight-color);
   color: var(--text-light);
 }
- .logo {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 50px;
-            height: auto;
-        }
 
-        @media only screen and (min-width: 768px) {
-            .logo {
-                display: none;
-            }
-        }
