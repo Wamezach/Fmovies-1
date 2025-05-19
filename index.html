@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Movie App</title>
+  <title>fmovies - Watch Movies for Free</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <header>
-  <img src="logo.png" alt="Movie App Logo" class="logo" />
+  <img src="logo.png" alt="fmovies Logo" class="logo" />
+  <h1>fmovies</h1>
+  <p>Your go-to destination to watch movies online for free! Explore our extensive collection of films from various genres and eras, and enjoy uninterrupted streaming at your convenience.</p>
   <form id="form" class="search-container" role="search" aria-label="Movie search form">
     <input
       type="search"
@@ -21,8 +23,7 @@
       spellcheck="false"
     />
     <button type="button" id="clearSearch" class="clear-btn" aria-label="Clear search input">↻</button>
-<div id="autocomplete-list" class="autocomplete-items"></div>
-
+    <div id="autocomplete-list" class="autocomplete-items"></div>
   </form>
 </header>
 
@@ -43,14 +44,9 @@
       <label for="server">Select Server:</label>
       <select id="server"></select>
     </div>
-<div class="video-container">
+    <div class="video-container">
       <iframe id="movieIframe" width="100%" height="560" frameborder="0" allowfullscreen></iframe>
     </div>
-
-    
-
-    
-        
     <p id="movieOverview"></p>
   </div>
 </div>
@@ -64,10 +60,9 @@
     <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
     <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
   </div>
-  <p>&copy; 2025 Movie App. All rights reserved.</p>
+  <p>&copy; 2025 fmovies. All rights reserved.</p>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
