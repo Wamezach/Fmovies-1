@@ -260,14 +260,17 @@ form.addEventListener('submit', (e) => {
 prev.addEventListener('click', () => {
     if (prevPage > 0) {
         pageCall(prevPage);
+        window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
     }
 });
 
 next.addEventListener('click', () => {
     if (nextPage <= totalPages) {
         pageCall(nextPage);
+        window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
     }
 });
+
 
 // Handle page calls for pagination
 function pageCall(page) {
