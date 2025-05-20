@@ -560,10 +560,7 @@ p {
 }
 
 @media (max-width: 768px) {
-    #movieOverview {
-        visibility: hidden;
-        height: 0;
-        overflow: hidden;
+    
     }
 
     .video-container {
