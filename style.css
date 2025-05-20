@@ -27,15 +27,6 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
 }
-.divider {
-  border: none;
-  height: 0.1em; /* reduced from 0.2em */
-  background-color: var(--highlight-color);
-  width: 80%;
- 
-
-  border-radius: 1em;
-}
 
 header {
     padding: 1rem;
@@ -484,8 +475,6 @@ footer {
     height: 35vh;
   }
 }
-
-
 h1 {
     font-size: clamp(24px, 6vw, 36px);
     margin: 0 0 1rem 0;
@@ -499,7 +488,10 @@ p {
 }
 
 @media (max-width: 768px) {
-    
+    #movieOverview {
+        visibility: hidden;
+        height: 0;
+        overflow: hidden;
     }
 
     .video-container {
