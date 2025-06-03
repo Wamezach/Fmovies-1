@@ -350,3 +350,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Initial load of TV shows
 getMovies(API_URL);
+ function toggleNav() {
+    document.getElementById('navMenu').classList.toggle('active');
+  }
