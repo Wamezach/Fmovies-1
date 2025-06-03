@@ -678,3 +678,38 @@ p {
   background-color: var(--highlight-color);
   color: var(--text-light);
 }
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Mobile view (Android) */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide nav on mobile by default */
+    flex-direction: column;
+    background-color: #f9f9f9;
+    padding: 10px;
+    position: absolute;
+    top: 50px; /* adjust as needed */
+    left: 10px;
+    right: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    border-radius: 8px;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show when toggled */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger on mobile */
+  }
+}
