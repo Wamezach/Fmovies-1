@@ -679,8 +679,7 @@ p {
   color: var(--text-light);
 }
 .nav-links {
-  display: flex;
-  gap: 20px;
+  transition: all 0.3s ease;
 }
 
 .hamburger {
@@ -693,23 +692,39 @@ p {
 /* Mobile view (Android) */
 @media (max-width: 768px) {
   .nav-links {
-    display: none; /* Hide nav on mobile by default */
+    display: none;
     flex-direction: column;
-    background-color: #f9f9f9;
+    background-color: #333;       /* dark background */
+    color: white;                 /* default text color */
     padding: 10px;
     position: absolute;
-    top: 50px; /* adjust as needed */
+    top: 50px;
     left: 10px;
     right: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     border-radius: 8px;
+    z-index: 1000;
+  }
+
+  .nav-links a {
+    color: white;                /* link text visible on dark background */
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid #444;
+  }
+
+  .nav-links a:hover {
+    background-color: #444;
   }
 
   .nav-links.active {
-    display: flex; /* Show when toggled */
+    display: flex;
   }
 
   .hamburger {
-    display: block; /* Show hamburger on mobile */
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
   }
 }
