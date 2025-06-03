@@ -751,3 +751,11 @@ p {
       color: var(--text-muted);
       line-height: 1.6;
     }
+.dev-photo {
+  width: 100px;       /* smaller size */
+  height: 100px;      /* equal height for perfect circle */
+  border-radius: 50%; /* makes it circular */
+  object-fit: cover;  /* crop to fill the circle */
+  margin-bottom: 1rem;
+  border: 3px solid var(--tag-bg); /* keeps the border */
+}
