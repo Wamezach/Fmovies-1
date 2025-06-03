@@ -322,3 +322,7 @@ document.addEventListener('click', e => {
     clearAutocomplete();
   }
 });
+
+ function toggleNav() {
+    document.getElementById('navMenu').classList.toggle('active');
+  }
