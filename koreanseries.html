@@ -11,14 +11,19 @@
 <header class="site-header">
   <img src="logo.png" alt="Movie App Logo" class="logo" />
 
-  <!-- Navigation Links -->
-  <nav class="nav-links">
-     <a href="index.html">Movies</a>
-    <a href="anime.html">Anime</a>
-    <a href="tvseries.html">TV-Series</a>
-<a href="netflixseries.html">Netflix-Series</a>
-<a href="koreanseries.html">Korean-Series</a>
-  </nav>
+ <!-- Hamburger icon, only shown on mobile -->
+<div class="hamburger" onclick="toggleNav()">
+  &#9776;
+</div>
+
+<!-- Navigation menu -->
+<nav class="nav-links" id="navMenu">
+  <a href="index.html">Movies</a>
+  <a href="anime.html">Anime</a>
+  <a href="tvseries.html">TV-Series</a>
+  <a href="netflixseries.html">Netflix-Series</a>
+  <a href="koreanseries.html">Korean-Series</a>
+</nav>
 
   <!-- Search Form -->
   <form id="form" class="search-container" role="search" aria-label="Movie search form">
