@@ -733,3 +733,21 @@ p {
     padding: 10px;
   }
 }
+ .about-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 2rem;
+      background-color: var(--secondary-color);
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .about-container h1 {
+      color: var(--highlight-color);
+      margin-bottom: 1rem;
+    }
+
+    .about-container p {
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
