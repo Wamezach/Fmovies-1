@@ -678,8 +678,12 @@ p {
   background-color: var(--highlight-color);
   color: var(--text-light);
 }
+
 .nav-links {
-  transition: all 0.3s ease;
+      transition: all 0.3s ease;
+  position: relative;      /* let it push content down */
+  top: 0;
+  margin-top: 10px;
 }
 
 .hamburger {
