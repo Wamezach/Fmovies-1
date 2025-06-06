@@ -3,83 +3,122 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>fmovies</title>
-  <link rel="stylesheet" href="your-stylesheet.css" />
+  <title>FMovies</title>
   <style>
-    body, html {
+    :root {
+      --primary-color: #141414;
+      --secondary-color: #181818;
+      --highlight-color: #E50914;
+      --tag-highlight: #B81D24;
+      --text-light: #FFFFFF;
+      --text-muted: #B3B3B3;
+    }
+
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
       height: 100%;
       font-family: 'Poppins', sans-serif;
       background-color: var(--primary-color);
+      color: var(--text-light);
     }
 
-    .hero {
-      position: relative;
+    .screen {
       height: 100vh;
-      width: 100%;
-      background: linear-gradient(
-          rgba(20, 20, 20, 0.85),
-          rgba(20, 20, 20, 0.85)
-        ),
-        url('background.jpg') no-repeat center center / cover;
+      background: linear-gradient(rgba(20, 20, 20, 0.85), rgba(20, 20, 20, 0.85)),
+        url('background.jpg') center / cover no-repeat;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      color: var(--text-light);
+      padding: 2rem 1rem;
     }
 
     .hero h1 {
-      font-size: clamp(3rem, 6vw, 5rem);
-      margin-bottom: 1rem;
+      font-size: clamp(3rem, 7vw, 5rem);
       color: var(--highlight-color);
-      letter-spacing: 2px;
+      margin-bottom: 1rem;
     }
 
     .hero p {
-      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      font-size: clamp(1.2rem, 3vw, 1.5rem);
       color: var(--text-muted);
-      margin-bottom: 2.5rem;
-      max-width: 800px;
+      margin-bottom: 2rem;
+      max-width: 700px;
     }
 
     .watch-now-btn {
       background-color: var(--highlight-color);
       color: var(--text-light);
-      font-size: clamp(1.2rem, 2.5vw, 2rem);
-      font-weight: 700;
-      padding: 1rem 3rem;
-      border: none;
+      padding: 1rem 2.5rem;
+      font-size: 1.3rem;
+      font-weight: bold;
       border-radius: 50px;
-      cursor: pointer;
       text-decoration: none;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-      box-shadow: 0 0 20px rgba(229, 9, 20, 0.4);
+      transition: background-color 0.3s ease;
+      box-shadow: 0 0 15px rgba(229, 9, 20, 0.4);
     }
 
     .watch-now-btn:hover {
       background-color: var(--tag-highlight);
-      transform: scale(1.05);
     }
 
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 2.5rem;
+    .about {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      max-width: 600px;
+    }
+
+    .about h2 {
+      font-size: 1.2rem;
+      color: var(--highlight-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .about p {
+      line-height: 1.4;
+    }
+
+    @media (max-height: 600px) {
+      .screen {
+        justify-content: flex-start;
+        padding-top: 2rem;
       }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
       .watch-now-btn {
         padding: 0.8rem 2rem;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+      }
+
+      .about {
+        margin-top: 2rem;
       }
     }
   </style>
 </head>
 <body>
-  <section class="hero">
-    <h1>Welcome to fmovies</h1>
-    <p>Unlimited entertainment. Zero ads. Just pure cinema — anytime, anywhere.</p>
-    <a href="index2.html" class="watch-now-btn">WATCH NOW</a>
+
+  <section class="screen">
+    <div class="hero">
+      <h1>Welcome to FMovies</h1>
+      <p>Watch movies, anime, and series without limits. Fast. Free. No ads.</p>
+      <a href="index2.html" class="watch-now-btn">WATCH NOW</a>
+    </div>
+    <div class="about">
+      <h2>About the Developer</h2>
+      <p>Hi, I’m <strong>Renkaku</strong> — a BSIT student at AMA Computer College, web developer, Android dev, and video editor. I created FMovies to deliver an effortless and cinematic streaming experience.</p>
+    </div>
   </section>
+
 </body>
 </html>
